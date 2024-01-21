@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+/.pnp.js
+.yarn/install-state.gz
+
+# next.js
+/.next/
+
+# typescript
+next-env.d.ts
