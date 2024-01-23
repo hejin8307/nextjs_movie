@@ -1,12 +1,19 @@
-import MovieInfo from "../../../../components/movie-info";
-import MovieVideo from "../../../../components/movie-video";
 import { Suspense } from "react";
+import MovieInfo, { getMovie } from "../../../../components/movie-info";
+import MovieVideo from "../../../../components/movie-video";
 
-export default async function MovieDetail({
-  params: { id },
-}: {
+interface IParams {
   params: { id: string };
-}) {
+}
+
+export async function generateMetadata({ params: { id } }: IParams) {
+  const movie = await getMovie(id);
+  return {
+    title: movie.title,
+  };
+}
+
+export default async function MovieDetail({ params: { id } }: IParams) {
   // if there're multiple requests to call, that's the way to call it in parallel
   // const [movie, video] = await Promise.all([getMovie(id), getVideos(id)]);
   return (
