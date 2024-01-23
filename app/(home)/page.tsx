@@ -1,10 +1,9 @@
 import Movie from "../../components/movie";
+import { API_URL } from "../constance";
 
 export const metadata = {
   title: "Home",
 };
-
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
   // nextjs caches data automatically, so we don't need to fetch data again after changing a page
