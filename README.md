@@ -31,4 +31,5 @@
 
 ## 💻 URL
 
-[Movies](nextjs-movies-two.vercel.app)
+[Movies](https://nextjs-movies-d132dx2p6-hyejins-projects-4ea2d23a.vercel.app/)
+
