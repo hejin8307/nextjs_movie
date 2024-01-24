@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     default: "Next Movies",
   },
   description: "The best movies on the best framework",
+  icons: {
+    icon: "./favicon.ico",
+  },
 };
 
 export default function RootLayout({
